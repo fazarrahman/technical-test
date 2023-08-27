@@ -26,6 +26,12 @@ func Test_MaxProfit_ArrayInput2(t *testing.T) {
 	assert.Equal(t, 148, res)
 }
 
+func Test_ShiftArray_ShiftMinusOneTime(t *testing.T) {
+	array := []int{1, 2, 3, 4, 5, 6, 7, 8, 9}
+	res := ShiftArray(array, -1)
+	assert.Equal(t, []int{}, res)
+}
+
 func Test_ShiftArray_ShiftZeroTime(t *testing.T) {
 	array := []int{1, 2, 3, 4, 5, 6, 7, 8, 9}
 	res := ShiftArray(array, 0)

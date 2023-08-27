@@ -8,7 +8,7 @@ import (
 func main() {
 	log.Println(MaxProfit([]int{31, 94, 91, 92, 4, 11, 2, 20, 59, 80, 1, 3, 2, 7}, 3))
 	array := []int{1, 2, 3, 4, 5, 6, 7, 8, 9}
-	log.Println(ShiftArray(array, 2))
+	log.Println(ShiftArray(array, -1))
 }
 
 func MaxProfit(prices []int, i int) int {
@@ -62,6 +62,10 @@ func MaxProfit(prices []int, i int) int {
 }
 
 func ShiftArray(array []int, i int) []int {
+	if i < 0 {
+		log.Println("Jumlah perputaran array harus bernilai positif")
+		return []int{}
+	}
 	t := [9]int{}
 	for x := 0; x < i; x++ {
 		t[0] = array[3]
